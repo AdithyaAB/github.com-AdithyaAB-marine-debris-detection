@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YOLO Video Detection</title>
+    <!-- Load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/datepicker.css"/>
+    <link rel="stylesheet" type="text/css" href="static/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="static/css/templatemo-style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #a1e4a1);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color:black;
+        }
+        form {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #f5576c;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #d04659;
+        }
+        .navbar {
+            margin-bottom: 30px;
+        }
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            font-weight: 600;
+            color: white !important;
+        }
+        .navbar-light .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .logo img {
+            width: 120px;
+        }
+        .right-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.right-first-image {
+    width: 100%;
+    max-width: 800px; /* Limits the max width of the entire block */
+    background-color: #f4f4f4; /* Optional: Background color for the container */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    overflow: hidden;
+    padding: 20px;
+}
+
+.thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inner-content h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inner-content span {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.main-border-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.main-border-button a:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 100%; /* Limits the max width of the image */
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the image is fully visible */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+.logo {
+    display: flex; /* Ensures proper alignment */
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+    width: 100%; /* Ensures it spans the available space */
+    max-width: 200px; /* Optional: Limits the max width for the logo */
+    margin: 10px auto; /* Centers the logo with some margin */
+    text-decoration: none; /* Removes underline */
+}
+
+.logo img {
+    width: 100%; /* Makes the logo responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 150px; /* Optional: Sets a maximum width for the logo image */
+    object-fit: contain; /* Ensures the entire logo is visible */
+    display: block; /* Ensures no extra space below the image */
+}
+
+    </style>
+</head>
+<body>
+   
+    <header class="header-area header-sticky" style="background: #333; padding: 10px 0;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+            <div class="row" style="display: flex; align-items: center;">
+                <div class="col-12" style="display: flex; justify-content: space-between; align-items: center;">
+                    <nav class="main-nav" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo" style="display: flex; align-items: center;">
+                            <img src="static/assets/images/logo.jpg" alt="Logo" style="height: 50px;">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav" style="list-style: none; display: flex; margin: 0; padding: 0; gap: 20px;">
+                            <li class="nav-item" style="display: inline;">
+                                <a class="nav-link active" href="/" style="color: white; text-decoration: none; font-size: 16px;">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item" style="display: inline;">
+                                <a class="nav-link" href="/register" style="color: white; text-decoration: none; font-size: 16px;">Register</a>
+                            </li>
+                            <li class="nav-item" style="display: inline;">
+                                <a class="nav-link" href="/login" style="color: white; text-decoration: none; font-size: 16px;">Login</a>
+                            </li>
+                            <li class="nav-item" style="display: inline;">
+                                <a class="nav-link" href="/index" style="color: white; text-decoration: none; font-size: 16px;">Main</a>
+                            </li>
+                           
+                        </ul>        
+                        <a class='menu-trigger' style="display: none;">
+                            <span style="color: white;">Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header><br>
+    <br>
+    <br>
+    <br>
+
+    <h1>Upload a Video or an Image for YOLO Detection</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="file" required>
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- Load scripts -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

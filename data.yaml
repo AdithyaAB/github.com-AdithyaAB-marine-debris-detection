@@ -1,0 +1,7 @@
+path: . # dataset root directory (relative to current directory)
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 15
+names: ['Mask', 'can', 'cellphone', 'electronics', 'gbottle', 'glove', 'metal', 'misc', 'net', 'pbag', 'pbottle', 'plastic', 'rod', 'sunglasses', 'tire']

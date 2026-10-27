@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Marine Debris Detection </title>
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="static/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="static/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="static/assets/css/templatemo-hexashop.css">
+
+    <link rel="stylesheet" href="static/assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="static/assets/css/lightbox.css">
+<!--
+
+TemplateMo 571 Hexashop
+
+https://templatemo.com/tm-571-hexashop
+
+-->
+    <style>
+.right-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.right-first-image {
+    width: 100%;
+    max-width: 800px; /* Limits the max width of the entire block */
+    background-color: #f4f4f4; /* Optional: Background color for the container */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    overflow: hidden;
+    padding: 20px;
+}
+
+.thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inner-content h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inner-content span {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.main-border-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.main-border-button a:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 100%; /* Limits the max width of the image */
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the image is fully visible */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+.logo {
+    display: flex; /* Ensures proper alignment */
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+    width: 100%; /* Ensures it spans the available space */
+    max-width: 200px; /* Optional: Limits the max width for the logo */
+    margin: 10px auto; /* Centers the logo with some margin */
+    text-decoration: none; /* Removes underline */
+}
+
+.logo img {
+    width: 100%; /* Makes the logo responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 150px; /* Optional: Sets a maximum width for the logo image */
+    object-fit: contain; /* Ensures the entire logo is visible */
+    display: block; /* Ensures no extra space below the image */
+}
+
+
+
+    </style>
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="/" class="logo">
+                            <img src="static/assets/images/logo.jpg">
+
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#men">Plastic Debris</a></li>
+                            <li class="scroll-to-section"><a href="#women">Glass Debris</a></li>
+                            <li class="scroll-to-section"><a href="#kids">Textiles Debris</a></li>
+                            <li class="scroll-to-section"><a href="/register">Register</a></li>
+                            <li class="scroll-to-section"><a href="/login">Login</a></li>
+                            
+                            
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+        <div class="container-fluid">
+            <div class="row">
+              
+                <div class="right-content">
+                    <div class="right-first-image">
+                        <div class="thumb">
+                            <div class="inner-content">
+                                <h4>Marine Debris Detection System Using Yolo</h4>
+                                <span>Clean seas, healthy lives—&amp;let’s keep the ocean free from debris. </span>
+                                <div class="main-border-button">
+                                    <a href="/register">Checkout</a>
+                                </div>
+                            </div>
+                            <div class="image-container">
+                                <img src="static/assets/images/left-banner-image.jpg" alt="Animal Detection System">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Men Area Starts ***** -->
+    <section class="section" id="men">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Plastic Debris</h2>
+                        <span>Plastic debris refers to discarded plastic items such as bottles, bags, and packaging that pollute the environment. Due to its durability and resistance to natural degradation, plastic debris poses a serious threat to both land and marine ecosystems. It can take hundreds of years to decompose, causing long-term harm to wildlife and the environment.</span>
+                        <p>Reducing plastic debris requires a collective effort through better waste management, recycling programs, and the reduction of single-use plastics. Innovative detection systems, such as AI-based recognition, can help identify and manage plastic waste more efficiently, reducing its impact on the environment and ensuring a cleaner, safer planet for future generations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="men-item-carousel">
+                        <div class="owl-men-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-pixabay-39857 (3).jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                    
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-martinxmarie-7981602.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                               
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-nguy-n-thanh-ng-c-485749-4015422.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                              
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-n-voitkevich-4813971.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                   
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Men Area Ends ***** -->
+
+    <!-- ***** Women Area Starts ***** -->
+    <section class="section" id="women">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Glass Debris</h2>
+                        <span>Glass debris refers to broken or discarded glass objects, such as bottles, jars, and windows, that pose significant environmental and safety hazards. Glass takes an extremely long time to degrade and can harm wildlife and ecosystems if not managed properly. Sharp fragments can also be dangerous for humans and animals.</span>
+                        <p>Addressing the issue of glass debris involves recycling and reusing glass materials, as they are 100% recyclable without loss of quality. Advanced detection systems can help identify glass debris in waste streams, ensuring efficient collection and processing. Together, we can minimize its impact and create safer, cleaner environments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="women-item-carousel">
+                        <div class="owl-women-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-martinxmarie-7981602.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                 
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-hazardos-762897.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                  
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/unpeeled-sunflower-seeds-bowl-tulle-blue-table.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                              
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/diamond-beach-jokulsarlon-glacier-lagoon-iceland.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                              
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Women Area Ends ***** -->
+
+    <!-- ***** Kids Area Starts ***** -->
+    <section class="section" id="kids">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-heading">
+                        <h2>Textile Debris</h2>
+                        <span>Textile debris refers to discarded fabrics, fibers, and garments that often end up polluting our environment. This type of waste is a significant contributor to land and marine pollution due to its synthetic composition and slow decomposition rates. Addressing textile debris is crucial for mitigating its environmental impact and preserving ecosystems.</span>
+                        <p>By adopting sustainable practices such as recycling and repurposing, we can reduce the accumulation of textile waste. Innovative detection and sorting systems are also pivotal in identifying and processing textile debris efficiently, paving the way for a cleaner and greener future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="kid-item-carousel">
+                        <div class="owl-kid-item owl-carousel">
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-marlene-buelow-872028803-19664416.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                  
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/fishing-rod-fishing-net-edge-wooden-pier-lake.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                   
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/pexels-theplanetspeaks-11075167.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                                 
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="thumb">
+                                    <div class="hover-content">
+                                        <ul>
+                                            <li><a href="/single-product"><i class="fa fa-eye"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-star"></i></a></li>
+                                            <li><a href="/single-product"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <img src="static/assets/images/asian-fisherman-friend-use-boat-fishing-net-fishing-river-early-morning-copy-space.jpg" alt="">
+                                </div>
+                                <div class="down-content">
+                            
+                                    <ul class="stars">
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                        <li><i class="fa fa-star"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Kids Area Ends ***** -->
+
+    <!-- ***** Explore Area Starts ***** -->
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="left-content">
+                        <h2>Marine Debris Detection Using Improved YOLO</h2>
+                        
+                            <span>Our Marine Debris Detection System leverages the YOLO (You Only Look Once) algorithm to deliver real-time, accurate identification of marine litter in diverse aquatic environments. Whether for ocean cleanup efforts, research, or environmental conservation, our solution is designed to meet your needs.</span>
+                            <div class="quote">
+                                <i class="fa fa-quote-left"></i><p>"YOLO's speed and precision make it an ideal tool for detecting and addressing marine debris in dynamic marine settings."</p>
+                            </div>
+                            <p>Using YOLO, our system can identify multiple types of debris in a single frame, ensuring comprehensive detection. The model has been trained on extensive datasets to recognize various debris categories with high accuracy, even in challenging water conditions or cluttered environments.</p>
+                            <p>Our technology is ideal for applications such as ocean cleanup operations, tracking plastic pollution, and supporting environmental research. By deploying this solution, you can monitor, analyze, and mitigate the impact of marine debris effectively and efficiently.</p>
+                            <div class="main-border-button">
+                                <a href="/register">Learn More</a>
+                            </div>
+                        </div>
+                
+                <div class="col-lg-6">
+                    <div class="right-content">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="leather">
+                                  
+                                    
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Explore Area Ends ***** -->
+
+    <!-- ***** Social Area Starts ***** -->
+    <section class="section" id="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h2>Social Media</h2>
+                        <span>Details to details is what makes Animal Park different from the other themes.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row images">
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Sea life</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="static/assets/images/unpeeled-sunflower-seeds-bowl-tulle-blue-table.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Sea life</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="static/assets/images/fishing-rod-fishing-net-edge-wooden-pier-lake.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Sea life</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="static/assets/images/still-life-waving-fabric-air.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Sea life</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="static/assets/images/fishing-rod-fishing-net-edge-wooden-pier-lake.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Sea life</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="static/assets/images/fish-appeared-surface-water-caught-fishing-hook.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumb">
+                        <div class="icon">
+                            <a href="http://instagram.com">
+                                <h6>Sea life</h6>
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </div>
+                        <img src="static/assets/images/fishing-rod-fishing-net-edge-wooden-pier-lake.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Social Area Ends ***** -->
+
+    <!-- ***** Subscribe Area Starts ***** -->
+    <div class="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <h2>Subscribe</h2>
+                     
+                    </div>
+                    <form id="subscribe" action="" method="get">
+                        <div class="row">
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="name" type="text" id="name" placeholder="Your Name" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-5">
+                            <fieldset>
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-2">
+                            <fieldset>
+                              <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+                            </fieldset>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <ul>
+                                <li>Store Location:<br><span>United States</span></li>
+                                <li>Phone:<br><span>010-020-0340</span></li>
+                                <li>Office Location:<br><span>South east Beach</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul>
+                                <li>Work Hours:<br><span>07:30 AM - 9:30 PM Daily</span></li>
+                                <li>Email:<br><span>info@company.com</span></li>
+                                <li>Social Media:<br><span><a href="#">Facebook</a>, <a href="#">Instagram</a>, <a href="#">Behance</a>, <a href="#">Linkedin</a></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Subscribe Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo" style="max-width: 20px;">
+                            <img src="static/assets/images/logo.jpg" style="max-width: 200px;" alt="hexashop ecommerce templatemo">
+                        </div>
+                        <ul>
+                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                            <li><a href="#">pythonteam@.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+              
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help &amp; Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>Copyright © 2024 Marine Debris Co., Ltd. All Rights Reserved. 
+                        
+                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">Template</a></p>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- jQuery -->
+    <script src="static/assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="static/assets/js/popper.js"></script>
+    <script src="static/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="static/assets/js/owl-carousel.js"></script>
+    <script src="static/assets/js/accordions.js"></script>
+    <script src="static/assets/js/datepicker.js"></script>
+    <script src="static/assets/js/scrollreveal.min.js"></script>
+    <script src="static/assets/js/waypoints.min.js"></script>
+    <script src="static/assets/js/jquery.counterup.min.js"></script>
+    <script src="static/assets/js/imgfix.min.js"></script> 
+    <script src="static/assets/js/slick.js"></script> 
+    <script src="static/assets/js/lightbox.js"></script> 
+    <script src="static/assets/js/isotope.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="static/assets/js/custom.js"></script>
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+
+  </body>
+</html>

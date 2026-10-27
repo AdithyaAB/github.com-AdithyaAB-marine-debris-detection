@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <!-- load stylesheets -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">  <!-- Google web font "Open Sans" -->
+     <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css">                <!-- Font Awesome -->
+     <link rel="stylesheet" href="static/css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+     <link rel="stylesheet" type="text/css" href="static/css/datepicker.css"/>
+     <link rel="stylesheet" type="text/css" href="static/slick/slick.css"/>
+     <link rel="stylesheet" type="text/css" href="static/slick/slick-theme.css"/>
+     <link rel="stylesheet" href="static/css/templatemo-style.css">  
+     
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f9;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .chart-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 40px);
+            box-sizing: border-box;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        @media (max-width: 768px) {
+            .chart-card {
+                width: 100%;
+            }
+        }
+        .right-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.right-first-image {
+    width: 100%;
+    max-width: 800px; /* Limits the max width of the entire block */
+    background-color: #f4f4f4; /* Optional: Background color for the container */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    overflow: hidden;
+    padding: 20px;
+}
+
+.thumb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inner-content h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.inner-content span {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.main-border-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.main-border-button a:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 100%; /* Limits the max width of the image */
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the image is fully visible */
+    border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+.logo {
+    display: flex; /* Ensures proper alignment */
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: center; /* Centers the logo vertically */
+    width: 100%; /* Ensures it spans the available space */
+    max-width: 200px; /* Optional: Limits the max width for the logo */
+    margin: 10px auto; /* Centers the logo with some margin */
+    text-decoration: none; /* Removes underline */
+}
+
+.logo img {
+    width: 100%; /* Makes the logo responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 150px; /* Optional: Sets a maximum width for the logo image */
+    object-fit: contain; /* Ensures the entire logo is visible */
+    display: block; /* Ensures no extra space below the image */
+}
+
+    </style>
+</head>
+<body>
+    <body style="font-family: Arial, sans-serif; background-color: white; color: white; text-align: center; padding: 50px;">
+        <!-- <div class="tm-main-content" id="top">
+            <div class="tm-top-bar-bg"></div>    
+            <div class="tm-top-bar" id="tm-top-bar">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand mr-auto" href="/" style="color: black;">
+                                <img src="static/img/logo.png" alt="Site logo">
+                                Journey
+                            </a>
+                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" href="/" style="color: black;">Home <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="/index" style="color: black;">Main</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link" href="/performance" style="color: black;">Performance</a>
+                                </li>
+                                  <li class="nav-item">
+                                      <a class="nav-link" href="/chart" style="color: black;">Chart</a>
+                                  </li>
+                                 
+                                </ul>
+                            </div>                            
+                        </nav>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- .tm-top-bar -->
+        </div> -->
+    
+        <header class="header-area header-sticky" style="background: #333; padding: 10px 0;">
+            <div class="container" style="max-width: 1200px; margin: auto;">
+                <div class="row" style="display: flex; align-items: center;">
+                    <div class="col-12" style="display: flex; justify-content: space-between; align-items: center;">
+                        <nav class="main-nav" style="width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap;">
+                            <!-- ***** Logo Start ***** -->
+                            <a href="/" class="logo" style="display: flex; align-items: left; ">
+                                <img src="static/assets/images/logo.jpg" alt="Logo" style="height: 50px;">
+                            </a>
+                            <!-- ***** Logo End ***** -->
+                            <!-- ***** Menu Start ***** -->
+                            <ul class="nav" style="list-style: none; display: flex; margin: 0; padding: 0; gap: 20px; flex-wrap: nowrap;">
+                                <li class="nav-item" style="display: inline;">
+                                    <a class="nav-link active" href="/" style="color: white; text-decoration: none; font-size: 16px;">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                               
+                                <li class="nav-item" style="display: inline;">
+                                    <a class="nav-link" href="/index" style="color: white; text-decoration: none; font-size: 16px;">Main</a>
+                                </li>
+                                <li class="nav-item" style="display: inline;">
+                                    <a class="nav-link" href="/performance" style="color: white; text-decoration: none; font-size: 16px;">Performance</a>
+                                </li>
+                                <li class="nav-item" style="display: inline;">
+                                    <a class="nav-link" href="/chart" style="color: white; text-decoration: none; font-size: 16px;">Chart</a>
+                                </li>
+                            </ul>        
+                            <a class='menu-trigger' style="display: none;">
+                                <span style="color: white;">Menu</span>
+                            </a>
+                            <!-- ***** Menu End ***** -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+
+        <body>
+            <h1>Marine Debris Data Charts</h1>
+        
+            <div class="chart-container">
+                <!-- Pie Chart -->
+                <div class="chart-card">
+                    <h2>Marine Debris Distribution</h2>
+                    <canvas id="pieChart" class="marine_debris_distribution"></canvas>
+                </div>
+        
+                <!-- Bar Chart -->
+                <div class="chart-card">
+                    <h2>Marine Debris Count</h2>
+                    <canvas id="barChart" class="marine_debris_count"></canvas>
+                </div>
+        
+                <!-- Additional Charts -->
+                <div class="chart-card">
+                    <h2>Plastic Trends Over Time</h2>
+                    <canvas id="plasticChart" class="plastic_trends"></canvas>
+                </div>
+        
+                <div class="chart-card">
+                    <h2>Debris Attributes</h2>
+                    <canvas id="debrisChart" class="debris_attributes"></canvas>
+                </div>
+            </div>
+        
+            <script>
+                // Pie Chart
+                const pieCtx = document.getElementById('pieChart').getContext('2d');
+                new Chart(pieCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Mask', 'Can', 'Cellphone', 'Electronics', 'GBottle', 'Glove', 'Metal', 'Misc', 'Net', 'PBag', 'PBottle', 'Plastic', 'Rod', 'Sunglasses', 'Tire'],
+                        datasets: [{
+                            label: 'Marine Debris Distribution',
+                            data: [12, 15, 8, 10, 7, 20, 18, 14, 9, 16, 22, 30, 5, 11, 8],
+                            backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff', '#ff9f40', '#c9cbcf', '#4b0082', '#800080', '#ff4500', '#2e8b57', '#4682b4', '#ffa500', '#20b2aa', '#8b0000'],
+                            borderWidth: 1
+                        }]
+                    }
+                });
+        
+                // Bar Chart
+                const barCtx = document.getElementById('barChart').getContext('2d');
+                new Chart(barCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Mask', 'Can', 'Cellphone', 'Electronics', 'GBottle', 'Glove', 'Metal', 'Misc', 'Net', 'PBag', 'PBottle', 'Plastic', 'Rod', 'Sunglasses', 'Tire'],
+                        datasets: [{
+                            label: 'Marine Debris Count',
+                            data: [14, 18, 10, 12, 8, 25, 20, 15, 11, 17, 28, 35, 7, 13, 10],
+                            backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56', '#4bc0c0', '#9966ff', '#ff9f40', '#c9cbcf', '#4b0082', '#800080', '#ff4500', '#2e8b57', '#4682b4', '#ffa500', '#20b2aa', '#8b0000'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+        
+                // Line Chart
+                const plasticCtx = document.getElementById('plasticChart').getContext('2d');
+                new Chart(plasticCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                        datasets: [{
+                            label: 'Plastic Trends Over Time',
+                            data: [50, 55, 60, 65, 70],
+                            borderColor: '#ffcd56',
+                            fill: false
+                        }]
+                    }
+                });
+        
+                // Radar Chart
+                const debrisCtx = document.getElementById('debrisChart').getContext('2d');
+                new Chart(debrisCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Weight', 'Size', 'Hazard Level', 'Frequency'],
+                        datasets: [{
+                            label: 'Debris Attributes',
+                            data: [75, 85, 90, 80],
+                            backgroundColor: 'rgba(75,192,192,0.4)',
+                            borderColor: '#4bc0c0'
+                        }]
+                    }
+                });
+            </script>
+        </body>
+        </html>
+        
